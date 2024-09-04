@@ -8,7 +8,7 @@ export default function About() {
     "Discover the beauty of Switzerland with ease. From the majestic Alps to charming villages, our platform offers a seamless experience to plan your Swiss adventure. Whether you're seeking thrilling outdoor activities, relaxing spa retreats, or cultural explorations, we've got you covered. Enjoy personalized recommendations and expert insights to make the most of your journey through one of Europe's most picturesque destinations.";
 
   return (
-    <section className="container mx-auto px-6 mt-16">
+    <section className="container mx-auto px-6 mt-16" data-aos="fade-up">
       <div className="w-full">
         <div className="flex flex-col xl:flex-row justify-around items-center">
           <h1 className="text-3xl xl:text-4xl md:text-2xl sm:text-xl font-bold text-center md:text-left mb-4 xl:mb-0">

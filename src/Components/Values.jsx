@@ -4,7 +4,7 @@ import { GoTag } from "react-icons/go";
 
 export default function Values() {
   return (
-    <section className="container text-center mx-auto py-14">
+    <section className="container text-center mx-auto py-14" data-aos="fade-up">
       <div className="w-full">
         <h1 className="text-2xl xl:text-4xl md:text-2xl sm:text-lg font-bold">
           Exclusive <span className="font-playfair">Deals</span> Just for You

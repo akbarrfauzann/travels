@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
@@ -8,8 +9,14 @@ import Booking from "./Components/Booking";
 import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 import ThankYou from "./Pages/ThankYou";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
+
   return (
     <BrowserRouter>
       <Navbar />

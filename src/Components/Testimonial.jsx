@@ -52,7 +52,7 @@ const items = [
 ];
 export default function Testimonial() {
   return (
-    <section className="container mx-auto">
+    <section className="container mx-auto" data-aos="fade-up">
       <div className="w-full px-6 mt-6">
         <h1 className="text-3xl font-bold">Testimonials</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 export default function Hero() {
   const images = ["/src/assets/images/jungfraujoch1.jpg", "/src/assets/images/swiss3.jpg", "/src/assets/images/jungfraujoch1.jpg"];
@@ -19,7 +18,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="container mx-auto text-center">
+    <section className="container mx-auto text-center" data-aos="fade-up">
       <div className="w-full px-6 mt-2 relative">
         <div
           className="text-white p-10 bg-cover bg-center bg-no-repeat rounded-xl"
@@ -35,9 +34,9 @@ export default function Hero() {
             </h1>
           </div>
           <p className="text-md mt-4 font-medium">A place where natural beauty and adventure meet</p>
-          <Link to="/booking" className="inline-block bg-white text-sm rounded-xl px-8 py-2 mt-8 text-black hover:text-gray-400">
+          <a href="#tours" className="inline-block bg-white text-sm rounded-xl px-8 py-2 mt-8 text-black hover:text-gray-400">
             Book Now
-          </Link>
+          </a>
           <div className="flex space-x-2 mt-6">
             <button onClick={goToPrevious} className="p-3 bg-transparent border text-white rounded-full hover:bg-white hover:text-black transition duration-300 ease-in-out" aria-label="Previous">
               <FaLongArrowAltLeft className="w-6 h-6 sm:w-3 sm:h-3" />

@@ -1,40 +1,13 @@
-import { useRef } from "react";
-import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
+import { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 export default function Tours() {
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 4,
-      slidesToSlide: 4,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-      slidesToSlide: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      slidesToSlide: 1,
-    },
-  };
-
-  const carouselRef = useRef();
-
-  const handlePrevious = () => {
-    if (carouselRef.current) carouselRef.current.previous(0);
-  };
-
-  const handleNext = () => {
-    if (carouselRef.current) carouselRef.current.next(0);
-  };
+  const [visibleTours, setVisibleTours] = useState(4);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const tours = [
     {
@@ -71,25 +44,63 @@ export default function Tours() {
       rating: 4.5,
       description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
+
+    {
+      id: 5,
+      name: "Lugano",
+      image: "/src/assets/images/lugano.jpg",
+      price: "$300 / person",
+      rating: 4.5,
+      description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+
+    {
+      id: 6,
+      name: "Lugano",
+      image: "/src/assets/images/lugano.jpg",
+      price: "$300 / person",
+      rating: 4.5,
+      description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+
+    {
+      id: 7,
+      name: "Lugano",
+      image: "/src/assets/images/lugano.jpg",
+      price: "$300 / person",
+      rating: 4.5,
+      description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+
+    {
+      id: 8,
+      name: "Lugano",
+      image: "/src/assets/images/lugano.jpg",
+      price: "$300 / person",
+      rating: 4.5,
+      description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
   ];
 
+  function handleClick() {
+    if (isExpanded) {
+      setVisibleTours(4);
+    } else {
+      setVisibleTours(tours.length);
+    }
+    setIsExpanded(!isExpanded);
+  }
+
   return (
-    <section className="container mx-auto relative">
-      <div className="w-full px-6 mb-10">
+    <section className="container mx-auto relative" id="tours">
+      <div className="w-full px-6 mb-10" data-aos="fade-up">
         <h1 className="font-bold text-3xl lg:text-4xl md:text-2xl sm:text-xl mb-6">
           Select Your <span className="font-playfair">Adventure</span>
         </h1>
-        <span className="flex gap-x-2 items-center justify-end">
-          <button className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 rounded-md" aria-label="Previous" onClick={handlePrevious}>
-            <IoIosArrowDropleft />
-          </button>
-          <button className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 rounded-md" aria-label="Next" onClick={handleNext}>
-            <IoIosArrowDropright />
-          </button>
-        </span>
-        <Carousel partialVisbile={false} swipeable={true} draggable={false} ssr={true} infinite arrows={false} keyBoardControl={true} renderButtonGroupOutside={true} responsive={responsive} ref={carouselRef}>
-          {tours.map((tour) => (
-            <div className="rounded-3xl h-full flex flex-col justify-between border-2 border-slate-200 overflow-hidden mx-1" key={tour.id}>
+
+        <div className="grid grid-cols-1 xl:grid-cols-4 md:grid-cols-2 gap-2">
+          {tours.slice(0, visibleTours).map((tour) => (
+            <div className="rounded-3xl h-full flex flex-col justify-between border-2 border-slate-200 overflow-hidden" key={tour.id}>
               <div className="relative">
                 <img src={tour.image} alt={tour.name} className="w-full h-72 object-cover rounded-2xl" />
                 <div className="absolute top-2 left-3 flex items-center px-2 py-1 text-sm font-bold bg-gray-100 text-black rounded-full">
@@ -110,7 +121,14 @@ export default function Tours() {
               </div>
             </div>
           ))}
-        </Carousel>
+        </div>
+        {tours.length > 4 && (
+          <div className="text-center mt-4">
+            <button className="text-sm bg-white text-black border-black hover:bg-black hover:text-white border-2 rounded-xl px-4 py-2 mt-2" onClick={handleClick} type="button">
+              {isExpanded ? "See Less" : "See All"}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
