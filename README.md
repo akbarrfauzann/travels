@@ -1,8 +1,8 @@
 ![Cuplikan layar 2024-09-04 122745](https://github.com/user-attachments/assets/600879af-9a6c-466a-ac48-f2e4512a379d)
 -
-![Cuplikan layar 2024-09-04 122917](https://github.com/user-attachments/assets/87c7da6b-ebc5-4e56-912d-167c2383286b)
--
 ![Cuplikan layar 2024-09-04 122858](https://github.com/user-attachments/assets/c15ae89c-f060-4979-84e1-d565aded6bea)
+-
+![Cuplikan layar 2024-09-04 122917](https://github.com/user-attachments/assets/87c7da6b-ebc5-4e56-912d-167c2383286b)
 -
 ![Cuplikan layar 2024-09-04 123036](https://github.com/user-attachments/assets/6571a3cb-2cbd-43dd-b283-6ad14af16326)
 -
