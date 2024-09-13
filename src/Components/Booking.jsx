@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CiLocationOn, CiBadgeDollar } from "react-icons/ci";
 import { FaStar } from "react-icons/fa";
 import { MdOutlineGroup } from "react-icons/md";
@@ -8,17 +8,21 @@ function Booking() {
   const [startDate, setStartDate] = useState("");
   const [guests, setGuests] = useState(1);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleBooking = () => {
-    alert(`Booking confirmed for ${guests} guest(s) from ${startDate}`);
+    confirm(`Booking confirmed for ${guests} guest(s) from ${startDate}`);
   };
 
   return (
-    <section className="container mx-auto px-6">
+    <section className="container mx-auto px-6" id="booking" data-aos="fade-up">
       <div className="flex flex-col md:flex-row gap-6 mt-4">
         <div className="flex-1 flex flex-col">
           <div className="rounded-md flex flex-col justify-between border-2 border-slate-200 overflow-hidden">
             <div className="px-6 py-4">
-              <img src="/src/assets/images/swiss1.webp" alt="Jungfraujoch" className="w-full h-auto rounded-lg" loading="lazy" />
+              <img src="/src/assets/images/swiss1.webp" alt="Jungfraujoch" className="w-full h-auto rounded-lg" loading="eager" />
 
               <div className="mt-4">
                 <h2 className="text-xl font-bold text-gray-800 mb-2">Jungfraujoch</h2>
@@ -42,7 +46,7 @@ function Booking() {
               </div>
             </div>
           </div>
-          <div className="px-6">
+          <div>
             <h3 className="text-lg font-bold text-gray-800 mt-4">Reviews (2 reviews)</h3>
             <div className="flex flex-row items-center mt-2 space-x-2">
               <div className="flex items-center gap-3">
@@ -71,7 +75,7 @@ function Booking() {
             <form action="">
               <div className="relative flex h-10 w-full mt-4">
                 <button
-                  className="!absolute right-1 top-1 z-10 select-none rounded-md bg-black py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-black/20 transition-all hover:shadow-lg hover:shadow-black/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none peer-placeholder-shown:pointer-events-none peer-placeholder-shown:bg-blue-gray-500 peer-placeholder-shown:opacity-50 peer-placeholder-shown:shadow-none"
+                  className="!absolute right-1 top-1 z-10 select-none rounded-md bg-black py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-black/20 transition-all hover:shadow-lg hover:shadow-black/40"
                   type="button"
                   aria-label="Submit form"
                   data-ripple-light="true"
@@ -100,7 +104,7 @@ function Booking() {
               <div className="w-full">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between">
                   <div className="">
-                    <p>Jese Leos</p>
+                    <p>Jes Leos</p>
                     <time dateTime="2014-08-16 19:00" className="block text-xs text-gray-600">
                       September 1, 2024
                     </time>
@@ -162,21 +166,21 @@ function Booking() {
               <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
                 Full Name
               </label>
-              <input id="name" type="text" className="w-full px-3 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-black" placeholder="Insert your name" autoComplete="off" />
+              <input id="name" type="text" className="w-full px-3 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-black text-sm" placeholder="Insert your name" autoComplete="off" />
             </div>
 
             <div className="mb-4">
               <label htmlFor="phone" className="block text-gray-700 text-sm font-bold mb-2">
                 Phone
               </label>
-              <input id="phone" type="tel" className="w-full px-3 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-black" placeholder="+62 812-3456-7890" autoComplete="off" />
+              <input id="phone" type="tel" className="w-full px-3 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-black text-sm" placeholder="+62 812-3456-7890" autoComplete="off" />
             </div>
 
             <div className="mb-4">
               <label htmlFor="date" className="block text-gray-700 text-sm font-bold mb-2">
                 Date
               </label>
-              <input id="date" type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} className="w-full px-3 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-black" autoComplete="off" />{" "}
+              <input id="date" type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} className="w-full px-3 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-black text-sm" autoComplete="off" />{" "}
             </div>
 
             <div className="mb-4">

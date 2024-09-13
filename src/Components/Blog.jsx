@@ -3,7 +3,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { IoTimeOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
-export default function About() {
+export default function Blog() {
   const longText =
     "Discover the beauty of Switzerland with ease. From the majestic Alps to charming villages, our platform offers a seamless experience to plan your Swiss adventure. Whether you're seeking thrilling outdoor activities, relaxing spa retreats, or cultural explorations, we've got you covered. Enjoy personalized recommendations and expert insights to make the most of your journey through one of Europe's most picturesque destinations.";
 
@@ -23,7 +23,7 @@ export default function About() {
                 <img src="/src/assets/images/swiss1.jpg" alt="Left Image" className="w-full h-60 md:h-full object-cover rounded-xl" loading="lazy" />
                 <div className="absolute top-2 right-3 flex items-center px-2 py-1 text-sm font-bold bg-black/20 text-white rounded-full">
                   <IoTimeOutline className="w-4 h-4 mr-2" />
-                  <span>7 min read</span>
+                  <span>6 min read</span>
                 </div>
               </div>
               <div className="py-4 px-6 flex flex-col flex-grow justify-between">
@@ -34,8 +34,10 @@ export default function About() {
                     <span className="bg-gray-300 text-black text-sm rounded-md px-2">Weather</span>
                     <span className="bg-gray-300 text-black text-sm rounded-md px-2">Trips</span>
                   </div>
-                  <button tabIndex="-1" className="ml-4 text-white bg-black rounded-full p-2 hover:bg-white hover:text-black border hover:border-black" aria-label="button">
-                    <FaArrowRightLong />
+                  <button tabIndex="-1" className="ml-4 text-white bg-black rounded-full p-2 hover:bg-white hover:text-black border hover:border-black" aria-label="Go to Blog Detail">
+                    <Link to="/blogDetail" className="flex items-center">
+                      <FaArrowRightLong />
+                    </Link>
                   </button>
                 </div>
               </div>
@@ -101,9 +103,9 @@ export default function About() {
             <h1 className="text-2xl xl:text-4xl md:text-3xl sm:text-2xl font-bold text-white text-center md:text-left mb-4 xl:mb-0">
               Explore the <span className="font-playfair">Beauty</span> of Switzerland
             </h1>
-            <Link to="/booking" className="inline-block bg-white text-sm rounded-xl px-8 py-2 mt-8 text-black hover:text-gray-400">
+            <a href="#tours" className="inline-block bg-white text-sm rounded-xl px-8 py-2 mt-8 text-black hover:text-gray-400">
               Book Now
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -114,7 +114,7 @@ export default function Tours() {
                 </div>
                 <div className="flex items-center justify-between">
                   <span>{tour.price}</span>
-                  <Link to="/tourDetail" className="ml-4 text-white bg-black rounded-full p-2 hover:bg-white hover:text-black border hover:border-black" role="button" aria-label="View tour details">
+                  <Link to="/booking" className="ml-4 text-white bg-black rounded-full p-2 hover:bg-white hover:text-black border hover:border-black" role="button" aria-label="View tour details">
                     <FaArrowRightLong />
                   </Link>
                 </div>

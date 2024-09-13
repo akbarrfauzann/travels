@@ -1,4 +1,5 @@
 import { FaInstagram, FaFacebookF, FaYoutube } from "react-icons/fa";
+import {} from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -90,7 +91,8 @@ export default function Footer() {
               <FaInstagram />
               <span className="sr-only">Instagram page</span>
             </a>
-            <a href="#" className="text-gray-500 hover:text-red-500 ms-5">
+
+            <a href="#" className="text-gray-500 hover:text-red-600 ms-5">
               <FaYoutube />
               <span className="sr-only">Youtube channel</span>
             </a>

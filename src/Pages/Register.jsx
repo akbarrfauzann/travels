@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Register() {
   return (
-    <section className="container mx-auto text-center">
+    <section className="container mx-auto text-center" data-aos="fade-up">
       <div className="w-full px-6 mt-2">
         <div
           className="relative p-10 bg-cover bg-center bg-no-repeat rounded-xl"
