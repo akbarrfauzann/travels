@@ -27,7 +27,7 @@ export default function Register() {
                   id="username"
                   name="username"
                   placeholder="Enter your username"
-                  className="block w-full px-4 py-2 mt-2 text-sm text-gray-700 bg-white border rounded-lg focus:border-gray-200 focus:ring-gray-200 border-black focus:outline-none focus:ring focus:ring-opacity-40"
+                  className="block w-full px-4 py-2 mt-2 text-sm text-gray-700 bg-white border rounded-lg focus:border-gray-200 focus:ring-lime-700 border-black focus:outline-none focus:ring focus:ring-opacity-40"
                   autoComplete="username"
                 />
               </div>
@@ -43,7 +43,7 @@ export default function Register() {
                 id="email"
                 name="email"
                 placeholder="Enter your email"
-                className="block w-full px-4 py-2 mt-2 text-sm text-gray-700 bg-white border rounded-lg focus:border-gray-200 focus:ring-gray-200 border-black focus:outline-none focus:ring focus:ring-opacity-40"
+                className="block w-full px-4 py-2 mt-2 text-sm text-gray-700 bg-white border rounded-lg focus:border-gray-200 focus:ring-lime-700 border-black focus:outline-none focus:ring focus:ring-opacity-40"
                 autoComplete="email"
               />
 
@@ -58,7 +58,7 @@ export default function Register() {
                 id="password"
                 name="password"
                 placeholder="Enter your password"
-                className="block w-full px-4 py-2 mt-2 text-sm text-gray-700 bg-white border rounded-lg focus:border-gray-200 focus:ring-gray-200 border-black focus:outline-none focus:ring focus:ring-opacity-40"
+                className="block w-full px-4 py-2 mt-2 text-sm text-gray-700 bg-white border rounded-lg focus:border-gray-200 focus:ring-lime-700 border-black focus:outline-none focus:ring focus:ring-opacity-40"
                 autoComplete="new-password"
               />
 

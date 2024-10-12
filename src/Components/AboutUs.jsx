@@ -19,7 +19,7 @@ export default function AboutUs() {
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Vision and Mission</h2>
-            <div className="w-24 h-1 bg-green-500 mx-auto"></div>
+            <div className="w-24 h-1 bg-lime-700 mx-auto"></div>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-xl shadow-md p-8">
@@ -42,7 +42,7 @@ export default function AboutUs() {
             <ul className="space-y-4">
               {["Expert guides with local knowledge", "Tailor-made travel packages", "Safe and comfortable accommodations", "Exclusive access to hidden gems", "24/7 customer support"].map((item, index) => (
                 <li key={index} className="flex items-center text-gray-600">
-                  <svg className="h-6 w-6 mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-6 w-6 mr-2 text-lime-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   {item}
@@ -78,7 +78,7 @@ export default function AboutUs() {
         <div className="mt-10">
           <div className="text-center">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Let&apos;s get social</h2>
-            <div className="w-24 h-1 bg-green-500 mx-auto"></div>
+            <div className="w-24 h-1 bg-lime-700 mx-auto"></div>
             <div className="flex justify-center mt-12 mx-auto gap-8 cursor-pointer">
               <FaFacebookF className="w-6 h-6 text-black hover:bg-white hover:text-blue-500" />
               <FaInstagram className="w-6 h-6 text-black hover:bg-white hover:text-red-400" />
